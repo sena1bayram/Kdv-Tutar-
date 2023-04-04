@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+Scanner input= new Scanner(System.in);
+        double kdvOran;
+        double tutar, toplamTutar;
+
+        System.out.print("Tutar giriniz: ");
+        tutar=input.nextDouble();
+
+        if(tutar>0 && tutar<=1000)
+        {
+            kdvOran=0.18;
+            double kdvTutar= tutar * kdvOran;
+            toplamTutar=tutar+kdvTutar;
+            System.out.println("Toplam Tutar: "+ toplamTutar);
+        }
+        if(tutar>1000)
+        {
+            kdvOran=0.08;
+            double kdvTutar= tutar * kdvOran;
+            toplamTutar=tutar+kdvTutar;
+            System.out.println("Toplam Tutar: "+ toplamTutar);
+        }
+
+
+
+    }
+}
